@@ -14,15 +14,18 @@ using Npgsql.Internal;
 using Npgsql.PostgresTypes;
 using PlDotNET.Handler;
 using PlDotNET.Common;
+using Npgsql.Original;
+
+using NpgsqlConnectionOriginal = Npgsql.Original.NpgsqlConnection;
 
 namespace Npgsql;
 
 /// <summary>
 /// Represents a modified version of the NpgsqlConnection class that inherits from the
-/// original Npgsql class (<see cref="NpgsqlConnectionOrig"/>).
+/// original Npgsql class (<see cref="NpgsqlConnection"/>).
 /// </summary>
 [System.ComponentModel.DesignerCategory("")]
-public class NpgsqlConnection : NpgsqlConnectionOrig
+public class NpgsqlConnection : NpgsqlConnectionOriginal
 {
     NpgsqlDataSource? _dataSource;
 
