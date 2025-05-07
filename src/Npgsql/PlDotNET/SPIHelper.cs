@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using NpgsqlTypes;
 using PlDotNET.Common;
-using PlDotNET.Handler;
 
 namespace Npgsql;
 

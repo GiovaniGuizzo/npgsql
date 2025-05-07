@@ -13,13 +13,14 @@ using Npgsql;
 using Npgsql.Internal;
 using Npgsql.PostgresTypes;
 using PlDotNET.Common;
-using PlDotNET.Handler;
 using Npgsql.TypeMapping;
 
 using Npgsql.Internal.TypeHandlers;
 using Npgsql.Internal.TypeHandling;
 
 using Npgsql.BackendMessages;
+using Npgsql.Plugins;
+using Npgsql.Original;
 
 #pragma warning disable CS8618, CS8619, CS8604, CS8600, CS8603
 
@@ -271,7 +272,7 @@ public class NpgsqlDataReader : NpgsqlDataReaderOrig
         if (f != null)
         {
             OID t = (OID)f.TypeOID;
-            return DatumConversion.GetFieldType(t);
+            return DatumConversionProvider.Get().GetFieldType(t);
         }
         return GetField(ordinal).FieldType;
     }
@@ -375,7 +376,7 @@ public class NpgsqlDataReader : NpgsqlDataReaderOrig
                 }
 
                 OID t = (OID)f.TypeOID;
-                object value = DatumConversion.InputValue(this.CurrentRow[ordinal], t, arrayAllowsNullElements);
+                object value = DatumConversionProvider.Get().InputValue(this.CurrentRow[ordinal], t, arrayAllowsNullElements);
 
                 Type targetType = Nullable.GetUnderlyingType(typeof(T)) ?? typeof(T);
                 if (targetType != typeof(T))
@@ -408,7 +409,7 @@ public class NpgsqlDataReader : NpgsqlDataReaderOrig
             if (f != null)
             {
                 OID t = (OID)f.TypeOID;
-                return (T)(object)DatumConversion.InputNullableValue(this.CurrentRow[ordinal], t, true);
+                return (T)(object)DatumConversionProvider.Get().InputNullableValue(this.CurrentRow[ordinal], t, true);
             }
             else
             {
@@ -449,7 +450,7 @@ public class NpgsqlDataReader : NpgsqlDataReaderOrig
         if (f != null)
         {
             OID t = (OID)f.TypeOID;
-            return DatumConversion.InputValue(this.CurrentRow[ordinal], t);
+            return DatumConversionProvider.Get().InputValue(this.CurrentRow[ordinal], t);
         }
 
         return DBNull.Value;

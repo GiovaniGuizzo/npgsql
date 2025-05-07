@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Npgsql.BackendMessages;
 using Npgsql.Internal;
+using Npgsql.Original;
 using static Npgsql.Util.Statics;
 
 #pragma warning disable 1591

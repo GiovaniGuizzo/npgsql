@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Npgsql.Internal;
+using Npgsql.Original;
 using Npgsql.PostgresTypes;
 using Npgsql.Properties;
 using Npgsql.Util;

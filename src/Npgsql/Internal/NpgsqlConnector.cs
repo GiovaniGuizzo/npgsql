@@ -24,6 +24,7 @@ using static Npgsql.Util.Statics;
 using System.Transactions;
 using Microsoft.Extensions.Logging;
 using Npgsql.Properties;
+using Npgsql.Original;
 
 namespace Npgsql.Internal;
 

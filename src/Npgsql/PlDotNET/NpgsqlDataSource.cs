@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using Npgsql;
 using Npgsql.Internal;
 using Npgsql.PostgresTypes;
-using PlDotNET.Handler;
 using PlDotNET.Common;
 
 namespace Npgsql;

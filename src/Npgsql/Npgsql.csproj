@@ -17,10 +17,7 @@
     <Content Remove="NpgsqlTypes\**" />
     <Compile Remove="NpgsqlTypes\**" />
     <EmbeddedResource Remove="NpgsqlTypes\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\TypeHandlers/PlDotNET.Handlers.csproj" />
+    <ProjectReference Include="..\..\..\Common\PlDotNET.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

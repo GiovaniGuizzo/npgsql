@@ -17,6 +17,7 @@ using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using Npgsql.Internal;
 using Npgsql.Properties;
+using Npgsql.Original;
 
 namespace Npgsql;
 

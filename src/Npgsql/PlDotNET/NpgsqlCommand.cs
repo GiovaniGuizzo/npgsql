@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 using Npgsql;
 using Npgsql.Internal;
 using Npgsql.PostgresTypes;
-using PlDotNET.Handler;
 using PlDotNET.Common;
+using Npgsql.Plugins;
 
 #pragma warning disable CS8604
 
@@ -213,7 +213,7 @@ public class NpgsqlCommand : NpgsqlCommandOrig
                     for (int i = 0; i < parameters.Count; i++)
                     {
                         paramTypesOid[i] = NpgsqlHelper.FindOid(parameters[i].NpgsqlDbType);
-                        paramValues[i] = DatumConversion.OutputNullableValue((OID)paramTypesOid[i], parameters[i].Value);
+                        paramValues[i] = DatumConversionProvider.Get().OutputNullableValue((OID)paramTypesOid[i], parameters[i].Value);
                         nullmap[i] = parameters[i].Value == null || DBNull.Value.Equals(parameters[i].Value) ? 'n' : ' ';
                     }
 

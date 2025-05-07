@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Npgsql.BackendMessages;
 using Npgsql.Internal;
+using Npgsql.Original;
 using NpgsqlTypes;
 using static Npgsql.Util.Statics;
 
@@ -465,8 +466,8 @@ public sealed class NpgsqlBinaryImporter : ICancelable
     /// </para>
     /// <para>
     /// Note that if <see cref="Complete()" /> hasn't been invoked before calling this, the import will be cancelled and all changes will
-    /// be reverted. 
-    /// </para> 
+    /// be reverted.
+    /// </para>
     /// </summary>
     public void Dispose() => Close();
 
@@ -476,8 +477,8 @@ public sealed class NpgsqlBinaryImporter : ICancelable
     /// </para>
     /// <para>
     /// Note that if <see cref="CompleteAsync" /> hasn't been invoked before calling this, the import will be cancelled and all changes will
-    /// be reverted. 
-    /// </para> 
+    /// be reverted.
+    /// </para>
     /// </summary>
     public ValueTask DisposeAsync()
     {
@@ -513,8 +514,8 @@ public sealed class NpgsqlBinaryImporter : ICancelable
     /// </para>
     /// <para>
     /// Note that if <see cref="Complete()" /> hasn't been invoked before calling this, the import will be cancelled and all changes will
-    /// be reverted. 
-    /// </para> 
+    /// be reverted.
+    /// </para>
     /// </summary>
     public void Close() => CloseAsync(false).GetAwaiter().GetResult();
 
@@ -524,8 +525,8 @@ public sealed class NpgsqlBinaryImporter : ICancelable
     /// </para>
     /// <para>
     /// Note that if <see cref="CompleteAsync" /> hasn't been invoked before calling this, the import will be cancelled and all changes will
-    /// be reverted. 
-    /// </para> 
+    /// be reverted.
+    /// </para>
     /// </summary>
     public ValueTask CloseAsync(CancellationToken cancellationToken = default)
     {

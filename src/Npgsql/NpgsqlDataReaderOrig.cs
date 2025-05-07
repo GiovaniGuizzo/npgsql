@@ -18,6 +18,7 @@ using Npgsql.BackendMessages;
 using Npgsql.Internal;
 using Npgsql.Internal.TypeHandlers;
 using Npgsql.Internal.TypeHandling;
+using Npgsql.Original;
 using Npgsql.PostgresTypes;
 using Npgsql.Schema;
 using Npgsql.Util;

@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Npgsql.Internal;
-using PlDotNET.Handler;
 using PlDotNET.Common;
 
 namespace Npgsql;
