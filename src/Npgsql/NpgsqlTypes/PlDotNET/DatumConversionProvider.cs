@@ -1,6 +1,6 @@
 using System;
 
-namespace Npgsql.Plugins;
+namespace NpgsqlTypes;
 
 /// <summary>
 /// Provides a mechanism to register and retrieve a singleton instance of an <see cref="IDatumConversion"/> implementation.

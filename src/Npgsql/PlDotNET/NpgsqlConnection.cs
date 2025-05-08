@@ -12,8 +12,9 @@ using System.Threading.Tasks;
 using Npgsql;
 using Npgsql.Internal;
 using Npgsql.PostgresTypes;
-using PlDotNET.Common;
 using Npgsql.Original;
+using NpgsqlTypes;
+using PlDotNET.Common;
 
 using NpgsqlConnectionOriginal = Npgsql.Original.NpgsqlConnection;
 

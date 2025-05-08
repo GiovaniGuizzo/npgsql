@@ -1,7 +1,6 @@
 using System;
-using PlDotNET.Common;
 
-namespace Npgsql.Plugins;
+namespace NpgsqlTypes;
 
 /// <summary>
 /// Defines methods for converting between PostgreSQL data types (represented by OIDs)

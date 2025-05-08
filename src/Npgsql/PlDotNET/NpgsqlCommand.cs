@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 using Npgsql;
 using Npgsql.Internal;
 using Npgsql.PostgresTypes;
+using NpgsqlTypes;
 using PlDotNET.Common;
-using Npgsql.Plugins;
 
 #pragma warning disable CS8604
 

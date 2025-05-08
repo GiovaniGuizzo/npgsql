@@ -12,15 +12,16 @@ using System.Threading.Tasks;
 using Npgsql;
 using Npgsql.Internal;
 using Npgsql.PostgresTypes;
-using PlDotNET.Common;
 using Npgsql.TypeMapping;
 
 using Npgsql.Internal.TypeHandlers;
 using Npgsql.Internal.TypeHandling;
 
 using Npgsql.BackendMessages;
-using Npgsql.Plugins;
 using Npgsql.Original;
+using NpgsqlTypes;
+
+using PlDotNET.Common;
 
 #pragma warning disable CS8618, CS8619, CS8604, CS8600, CS8603
 
