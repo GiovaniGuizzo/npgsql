@@ -22,7 +22,7 @@ using Npgsql.Original;
 using Npgsql.PostgresTypes;
 using Npgsql.Schema;
 using Npgsql.Util;
-using NpgsqlTypes;
+using NpgsqlDbType = NpgsqlTypes.NpgsqlDbType;
 using static Npgsql.Util.Statics;
 
 #pragma warning disable CA2222 // Do not decrease inherited member visibility
